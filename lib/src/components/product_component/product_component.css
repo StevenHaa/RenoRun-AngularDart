@@ -4,6 +4,7 @@
         flex-wrap: wrap;
         height: 761px;
         background: white;
+        margin-bottom: 30px;
     }
     
     .product-image-container-m {
@@ -154,6 +155,7 @@
         flex-wrap: wrap;
         height: 533px;
         background: white;
+        margin-bottom: 50px;
     }
 
     .product-image-container-m {

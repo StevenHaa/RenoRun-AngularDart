@@ -1,4 +1,4 @@
-<div class="product-container">
+<div *ngFor="let product of products" class="product-container">
     <div class="product-image-container-m">
         <img class="product-background" src="assets/images/VectorM.png" alt="a vector design background">
         <img class="product-image" src="assets/images/ChairM.png" alt="Picture of a chair">
@@ -12,15 +12,15 @@
     <div class="product-details-container">
         <div class="product-information"> 
             <div class="product-title">
-                Chair 9000+
+                {{ product.name }}
             </div>
 
             <div class="product-description">
-                A chair is a type of seat. Its primary features are two pieces of a durable material, attached as back and seat to one another at a 90° or slightly greater angle.
+                {{ product.description }}
             </div>
 
             <div class="product-price">
-                $499.99
+                ${{ product.price }}
             </div>
 
             <form>
@@ -32,7 +32,7 @@
                 <div class="colour">
                     <p>COLOUR</p>
                     <label>
-                        <input name="colour" type="radio"/>
+                        <input name="colour" type="radio" required/>
                         <span class="box gold"></span>
                     </label>
                     

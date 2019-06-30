@@ -8,7 +8,8 @@ import 'package:angular/angular.dart';
 	templateUrl: 'product_component.html',
 	styleUrls: ['product_component.css'],
 	// add all services this component requires
-	providers: [ClassProvider(ProductService)]
+	providers: [ClassProvider(ProductService)],
+	directives: [coreDirectives],
 )
 
 class ProductComponent implements OnInit{
