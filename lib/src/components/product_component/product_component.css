@@ -6,12 +6,16 @@
         background: white;
     }
     
-    .product-image-container {
+    .product-image-container-m {
         flex: 1 1 100%;
         position: relative;
         top: 0px;
         left: 0px;
         min-height: 300px;
+    }
+
+    .product-image-container-d {
+        display: none;
     }
     
     .product-background { 
@@ -142,5 +146,159 @@
         border-radius: 5px;
         opacity: 0.3;
     }
+}
 
+@media only screen and (min-width: 425px) {
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        height: 533px;
+        background: white;
+    }
+
+    .product-image-container-m {
+        display: none;
+    }
+
+    .product-image-container-d {
+        flex: 1 1 50%;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        min-height: 300px;
+    }
+
+    .product-background { 
+        position: absolute;
+        top: 25px;
+        left: 0px;
+    }
+
+    .product-image {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+    }
+
+    .product-details-container {
+        flex: 1 1 50%;
+    }
+
+    .product-title { 
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 59px;
+        margin-top: 95px;
+        margin-left: 40px;
+    }
+
+    .product-description { 
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 140%;
+        max-width: 450px;
+        margin-top: 8px;
+        margin-left: 40px;
+    }
+
+    .product-price {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 9px;
+        margin-left: 40px;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 450px;
+        margin-left: 40px;
+    }
+
+    .email {
+        flex: 1 1 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .email label {
+        flex: 1 1 100%;
+        margin-top: 20px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0.1em;
+    }
+
+    .email input {
+        flex: 1 1 100%;
+        max-width: 450px;
+        margin-top: 9px;
+        height: 40px;
+        border: 1px solid #DADEE1;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+    .email input[type=text]:focus{
+        outline: none;      /* Remove default outline and use border or box-shadow */
+        box-shadow: 0 0 0 2px #2F80ED; /* Full freedom. (works also with border-radius) */
+    }
+
+    .color {
+        flex: 1 1 70%;
+    }
+
+    .colour p {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0.1em;
+        margin-top: 16px;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    .box {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        margin-right: 14px;
+        border-radius: 5px
+    }
+
+    .box.gold {
+        background: #93907A;
+    }
+
+    .box.blue {
+        background: #505287;
+    }
+
+    .box.red { 
+        background: #8C494D;
+    }
+
+    input[type="submit"] {
+        flex: 1 1 30%;
+        max-width: 130px;
+        height: 40px;
+        margin-top: 36px;
+        background: #FE5000;
+        border: 1px solid white;
+        border-radius: 5px;
+        color: white;
+        padding: 12px 25px;
+        margin-bottom: 104px;
+        opacity: 0.3;
+    }
 }
