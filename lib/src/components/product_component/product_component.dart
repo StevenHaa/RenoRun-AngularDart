@@ -1,3 +1,4 @@
+import 'package:RenoRun_AngularDart/src/components/order_component/order_component.dart';
 import 'package:RenoRun_AngularDart/src/models/product.dart';
 import 'package:RenoRun_AngularDart/src/models/store.dart';
 import 'package:RenoRun_AngularDart/src/services/product_service.dart';
@@ -9,7 +10,7 @@ import 'package:angular/angular.dart';
 	styleUrls: ['product_component.css'],
 	// add all services this component requires
 	providers: [ClassProvider(ProductService)],
-	directives: [coreDirectives],
+	directives: [coreDirectives, OrderComponent],
 )
 
 class ProductComponent implements OnInit{
