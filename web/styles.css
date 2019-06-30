@@ -1,12 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Material+Icons);
-
-body {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 5vw;
+* {
+  font-family: Montserrat;
 }
 
-* {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+@media only screen and (max-width: 425px) {
+  body {
+    margin: 16px;
+    background: #E5E5E5;
+  }
 }
