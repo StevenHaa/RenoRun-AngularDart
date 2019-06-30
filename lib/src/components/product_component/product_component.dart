@@ -1,3 +1,5 @@
+import 'package:RenoRun_AngularDart/src/models/product.dart';
+import 'package:RenoRun_AngularDart/src/models/store.dart';
 import 'package:RenoRun_AngularDart/src/services/product_service.dart';
 import 'package:angular/angular.dart';
 
@@ -10,6 +12,8 @@ import 'package:angular/angular.dart';
 )
 
 class ProductComponent implements OnInit{
+	Store store;
+	List<Product> products;
 	ProductService productService;
 
 	ProductComponent(this.productService);
@@ -20,6 +24,7 @@ class ProductComponent implements OnInit{
 	}
 	
 	void fetchData() async {
-		await productService.fetchProductData();
+		store = await productService.fetchProductData();
+		products = store.products;
 	}
 }

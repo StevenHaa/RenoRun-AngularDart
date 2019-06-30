@@ -244,6 +244,7 @@
         border: 1px solid #DADEE1;
         box-sizing: border-box;
         border-radius: 5px;
+        padding-left: 13px;
     }
 
     .email input[type=text]:focus{
