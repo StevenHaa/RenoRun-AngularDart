@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:RenoRun_AngularDart/src/models/product.dart';
 import 'package:RenoRun_AngularDart/src/models/store.dart';
 import 'package:http/http.dart' as http;
 
