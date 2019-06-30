@@ -11,3 +11,5 @@ build/
 doc/api/
 
 env/
+__pycache__
+.vscode
