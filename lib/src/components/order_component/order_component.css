@@ -47,7 +47,8 @@
         display: none;
     }
 
-    .box {
+    .check-container {
+        position: relative;
         width: 40px;
         height: 40px;
         display: inline-block;
@@ -55,16 +56,62 @@
         border-radius: 5px
     }
 
-    .box.gold {
+    .check-container.gold {
         background: #93907A;
     }
 
-    .box.blue {
+    .check-container.blue {
         background: #505287;
     }
 
-    .box.red { 
+    .check-container.red { 
         background: #8C494D;
+    }
+
+    .check-background {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+    }
+
+    .check-gold {
+        position: absolute;
+        top: 15%;
+        left: 30%;
+        display: inline-block;
+        transform: rotate(45deg);
+        height: 10px;
+        width: 5px;
+        border-bottom: 2px solid #93907A;
+        border-right: 2px solid #93907A;
+    }
+
+    .check-blue {
+        position: absolute;
+        top: 15%;
+        left: 30%;
+        display: inline-block;
+        transform: rotate(45deg);
+        height: 10px;
+        width: 5px;
+        border-bottom: 2px solid #505287;
+        border-right: 2px solid #505287;
+    }
+
+    .check-red {
+        position: absolute;
+        top: 15%;
+        left: 30%;
+        display: inline-block;
+        transform: rotate(45deg);
+        height: 10px;
+        width: 5px;
+        border-bottom: 2px solid #8C494D;
+        border-right: 2px solid #8C494D;
     }
 
     input[type="submit"] {
@@ -142,7 +189,8 @@
         display: none;
     }
 
-    .box {
+    .check-container {
+        position: relative;
         width: 40px;
         height: 40px;
         display: inline-block;
@@ -150,16 +198,62 @@
         border-radius: 5px
     }
 
-    .box.gold {
+    .check-container.gold {
         background: #93907A;
     }
 
-    .box.blue {
+    .check-container.blue {
         background: #505287;
     }
 
-    .box.red { 
+    .check-container.red { 
         background: #8C494D;
+    }
+
+    .check-background {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+    }
+
+    .check-gold {
+        position: absolute;
+        top: 15%;
+        left: 30%;
+        display: inline-block;
+        transform: rotate(45deg);
+        height: 10px;
+        width: 5px;
+        border-bottom: 2px solid #93907A;
+        border-right: 2px solid #93907A;
+    }
+
+    .check-blue {
+        position: absolute;
+        top: 15%;
+        left: 30%;
+        display: inline-block;
+        transform: rotate(45deg);
+        height: 10px;
+        width: 5px;
+        border-bottom: 2px solid #505287;
+        border-right: 2px solid #505287;
+    }
+
+    .check-red {
+        position: absolute;
+        top: 15%;
+        left: 30%;
+        display: inline-block;
+        transform: rotate(45deg);
+        height: 10px;
+        width: 5px;
+        border-bottom: 2px solid #8C494D;
+        border-right: 2px solid #8C494D;
     }
 
     input[type="submit"] {

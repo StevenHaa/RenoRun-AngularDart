@@ -4,21 +4,45 @@
         <input type="text" id="email" required>
     </div>
 
+    <!-- <div class="colour">
+        <p>COLOUR</p>
+        <div *ngFor="let color of colors; let index=index">
+            <label for="colour"> </label>
+            <input #colorr type="radio" name="colour" id="colour"
+            [value]="color"
+            [(ngModel)]="model.colour"
+            ">
+            <span class="box {{color}}"></span>
+        </div>
+    </div> -->
+
     <div class="colour">
         <p>COLOUR</p>
         <label>
-            <input name="colour" type="radio" required/>
-            <span class="box gold"></span>
+            <input name="colour" type="radio" value="gold"/>
+            <span class="check-container gold">
+                <span class="check-background">
+                    <span class="check-gold"></span>
+                </span>
+            </span>
         </label>
         
         <label>
-            <input name="colour" type="radio"/>
-            <span class="box blue"></span>
+            <input name="colour" type="radio" value="blue"/>
+            <span class="check-container blue">
+                <span class="check-background">
+                    <span class="check-blue"></span>
+                </span>
+            </span>
         </label>
 
         <label>
-            <input name="colour" type="radio"/>
-            <span class="box red"></span>
+            <input name="colour" type="radio" value="red"/>
+            <span class="check-container red">
+                <span class="check-background">
+                    <span class="check-red"></span>
+                </span>
+            </span>
         </label>
     </div>
 
