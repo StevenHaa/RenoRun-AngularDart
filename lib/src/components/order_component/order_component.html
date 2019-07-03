@@ -2,9 +2,10 @@
         <div class="email">
             {{ model }}
             <label for="email">EMAIL</label>
-            <input type="text" id="email" required
+            <input type="email" id="email" required
                 [(ngModel)]="model.email"
                 ngControl="email"
+                (keyup)="validateEmail($event)"
             >
         </div>
     
@@ -53,5 +54,8 @@
             </label>
         </div>
     
-        <input type="submit" value="Send Order" >
+        <input class="submitButton" type="submit" value="Send Order" 
+            [disabled]="(validEmail == false && chosenColor == null)"
+            [ngClass]="{'inputs-filled': (validEmail == true && chosenColor != null)}"
+        >
     </form>

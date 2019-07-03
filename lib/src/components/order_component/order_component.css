@@ -258,7 +258,7 @@
         border-right: 2px solid #8C494D;
     }
 
-    input[type="submit"] {
+    .submitButton {
         flex: 1 1 30%;
         max-width: 130px;
         height: 40px;
@@ -275,4 +275,13 @@
 
 .checked { 
     display: inline-block;
+}
+
+.inputs-filled { 
+    -webkit-animation: fadein 0.5s linear 1 normal forwards;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
 }
