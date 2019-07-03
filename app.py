@@ -41,14 +41,14 @@ class ProductSchema(ma.Schema):
         fields = ('product_id', 'name', 'description', 'price',)
 
 
-# Order class
-
+# Product Class
 class Product(db.Model):
     product_id = db.Column(db.Integer, primary_key=True)
 
     def __init(self, product_id, ):
         self.product_id = product_id
 
+# Order class
 class Orders(db.Model):
     order_id = db.Column(db.Integer, primary_key=True)
     product_id = db.Column(db.Integer, db.ForeignKey('product.product_id'))
