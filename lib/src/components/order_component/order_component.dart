@@ -23,6 +23,7 @@ class OrderComponent implements OnInit{
   String chosenColor;
   // List<String> colors = ["gold", "blue", "red"];
   String buttonText = "Send Order";
+  bool sentOrder = false;
 
   OrderComponent(this.orderService);
 
@@ -55,6 +56,7 @@ class OrderComponent implements OnInit{
     model.productId = productId;
     print('onSubmit : $model');
     postOrder(productId, model.email, model.colour);
+    changeButtonCss();
     clearForm();
   }
 
@@ -70,5 +72,18 @@ class OrderComponent implements OnInit{
   void postOrder(int productId, String email, String colour){
     orderService.postOrder(productId, email, colour);
     print('done');
+  }
+
+  // function to change the css of the send button after sending 
+  Future<void> changeButtonCss() async{
+    buttonText = "Order Sent!";
+    sentOrder = true;
+    
+    await Future.delayed(const Duration(seconds: 1), (){
+      //reset
+      buttonText = "Send Order";
+      sentOrder = false;
+    });
+
   }
 }
