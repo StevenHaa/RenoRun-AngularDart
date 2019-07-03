@@ -1,4 +1,4 @@
-<div *ngFor="let product of products" class="product-container">
+<div *ngFor="let product of products; let index = index" class="product-container">
     <div class="product-image-container-m">
         <img class="product-background" src="assets/images/VectorM.png" alt="a vector design background">
         <img class="product-image" src="assets/images/ChairM.png" alt="Picture of a chair">
@@ -23,7 +23,7 @@
                 ${{ product.price }}
             </div>
 
-            <order></order>
+            <order [productId]="index+1"></order>
         </div>
     </div>
 

@@ -1,50 +1,57 @@
-<form>
-    <div class="email">
-        <label for="email">EMAIL</label>
-        <input type="text" id="email" required>
-    </div>
-
-    <!-- <div class="colour">
-        <p>COLOUR</p>
-        <div *ngFor="let color of colors; let index=index">
-            <label for="colour"> </label>
-            <input #colorr type="radio" name="colour" id="colour"
-            [value]="color"
-            [(ngModel)]="model.colour"
-            ">
-            <span class="box {{color}}"></span>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(productId); userForm.reset()">
+        <div class="email">
+            {{ model }}
+            <label for="email">EMAIL</label>
+            <input type="text" id="email" required
+                [(ngModel)]="model.email"
+                ngControl="email"
+            >
         </div>
-    </div> -->
-
-    <div class="colour">
-        <p>COLOUR</p>
-        <label>
-            <input name="colour" type="radio" value="gold"/>
-            <span class="check-container gold">
-                <span class="check-background">
-                    <span class="check-gold"></span>
+    
+        <!-- <div class="colour">
+            <p>COLOUR</p>
+            <div *ngFor="let color of colors; let index=index">
+                <label for="colour"> </label>
+                <input #colorr type="radio" name="colour" id="colour"
+                [value]="color"
+                [(ngModel)]="model.colour"
+                ">
+                <span class="box {{color}}"></span>
+            </div>
+        </div> -->
+    
+        <div class="colour">
+            <p>COLOUR</p>
+            <label>
+                <input type="radio" #colourGold name="colour" value="gold"
+                    (change)="updateColour(colourGold.value)" required/>
+                <span class="check-container gold">
+                    <span [ngClass]="{'check-background': true, 'checked': chosenColor==colourGold.value}">
+                        <span class="check-gold"></span>
+                    </span>
                 </span>
-            </span>
-        </label>
-        
-        <label>
-            <input name="colour" type="radio" value="blue"/>
-            <span class="check-container blue">
-                <span class="check-background">
-                    <span class="check-blue"></span>
+            </label>
+            
+            <label>
+                <input type="radio" #colourBlue name="colour" value="blue"
+                    (change)="updateColour(colourBlue.value)"/>
+                <span class="check-container blue">
+                        <span [ngClass]="{'check-background': true, 'checked': chosenColor==colourBlue.value}">
+                            <span class="check-blue"></span>
+                        </span>
                 </span>
-            </span>
-        </label>
-
-        <label>
-            <input name="colour" type="radio" value="red"/>
-            <span class="check-container red">
-                <span class="check-background">
-                    <span class="check-red"></span>
+            </label>
+    
+            <label>
+                <input type="radio" #colourRed name="colour" value="red"
+                    (change)="updateColour(colourRed.value)"/>
+                <span class="check-container red">
+                    <span [ngClass]="{'check-background': true, 'checked': chosenColor==colourRed.value}">
+                        <span class="check-red"></span>
+                    </span>
                 </span>
-            </span>
-        </label>
-    </div>
-
-    <input type="submit" value="Send Order">
-</form>
+            </label>
+        </div>
+    
+        <input type="submit" value="Send Order" >
+    </form>
