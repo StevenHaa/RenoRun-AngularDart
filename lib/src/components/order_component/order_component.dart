@@ -34,7 +34,13 @@ class OrderComponent implements OnInit{
   void onSubmit(int productId) {
     model.productId = productId;
     print('onSubmit : $model');
+    clearForm();
   }
 
-  
+  // function to clear the form after sending
+  void clearForm() {
+    model.email = "";
+    model.colour = "";
+    chosenColor = null;
+  }
 }
