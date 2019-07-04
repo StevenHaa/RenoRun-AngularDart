@@ -4,14 +4,14 @@
   font-family: Montserrat;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 777px) {
   body {
     margin: 16px;
     background: #E5E5E5;
   }
 }
 
-@media only screen and (min-width: 425px) {
+@media only screen and (min-width: 777px) {
   body {
     margin: 110px 137px 114px 117px;
     background: #E5E5E5;

@@ -1,6 +1,5 @@
 <form #userForm="ngForm" (ngSubmit)="onSubmit(productId); userForm.reset()">
         <div class="email">
-            {{ model }}
             <label for="email">EMAIL</label>
             <input type="email" id="email" required
                 [(ngModel)]="model.email"

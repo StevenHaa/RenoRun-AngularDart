@@ -1,5 +1,5 @@
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 426px) {
     .product-form {
         flex: 1 1 100%;
     }
@@ -115,7 +115,8 @@
         border-right: 2px solid #8C494D;
     }
 
-    input[type="submit"] {
+    .submitButton {
+        margin-bottom: 24px;
         width: 100%;
         background: #FE5000;
         color: white;
@@ -132,13 +133,14 @@
     }
 }
 
-@media only screen and (min-width: 425px) {
+@media only screen and (min-width: 426px) {
     form {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         max-width: 450px;
         margin-left: 40px;
+        margin-right: 40px;
     }
 
     .email {

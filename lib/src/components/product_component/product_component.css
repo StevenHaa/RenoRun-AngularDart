@@ -1,8 +1,7 @@
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 426px) {
     .product-container {
         display: flex;
         flex-wrap: wrap;
-        height: 761px;
         background: white;
         margin-bottom: 30px;
     }
@@ -20,15 +19,32 @@
     }
     
     .product-background { 
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+
+    .product-background > img {
         position: absolute;
         top: 0px;
         left: 0px;
+        display: block;
+        width: 100%;
     }
 
     .product-image {
+        position: relative;
+        min-height: 300px;
+        margin-top: 10%;
+    }
+
+    .product-image > img { 
         position: absolute;
-        top: 50px;
-        left: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width: 90%;
     }
 
     .product-details-container {
@@ -66,11 +82,10 @@
     }
 }
 
-@media only screen and (min-width: 425px) {
+@media only screen and (min-width: 426px) {
     .product-container {
         display: flex;
         flex-wrap: wrap;
-        height: 533px;
         background: white;
         margin-bottom: 50px;
     }
@@ -84,20 +99,41 @@
         position: relative;
         top: 0px;
         left: 0px;
-        min-height: 300px;
+        min-height: 400px;
+        margin: auto;
+        width: 100%;
+        max-width: 600px;
     }
 
     .product-background { 
+        position: relative;
+        height: auto;
+        max-width: 90%;
+    }
+    
+    .product-background > img { 
         position: absolute;
-        top: 25px;
-        left: 0px;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
     }
 
     .product-image {
-        position: absolute;
-        top: 100px;
-        left: 100px;
+        position: relative;
+        height: auto;
+        max-width: 80%;
+        margin: 10% 0px auto 15%;
     }
+    
+    .product-image > img { 
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+        width: 80%;
+    }
+
 
     .product-details-container {
         flex: 1 1 50%;
@@ -108,8 +144,7 @@
         font-weight: bold;
         font-size: 48px;
         line-height: 59px;
-        margin-top: 95px;
-        margin-left: 40px;
+        margin: 95px 40px 0px;
     }
 
     .product-description { 
@@ -118,8 +153,7 @@
         font-size: 16px;
         line-height: 140%;
         max-width: 450px;
-        margin-top: 8px;
-        margin-left: 40px;
+        margin: 8px 40px 0px;
     }
 
     .product-price {
@@ -127,7 +161,6 @@
         font-weight: normal;
         font-size: 24px;
         line-height: 29px;
-        margin-top: 9px;
-        margin-left: 40px;
+        margin: 9px 40px 0px;
     }
 }
