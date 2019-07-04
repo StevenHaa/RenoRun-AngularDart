@@ -15,10 +15,10 @@ class Product {
 
   // A constructor for a product in JSON format
   Product.fromJson(Map<String, dynamic> jsonProduct){
-    this.description = jsonProduct["description"];
-    this.name = jsonProduct["name"];
-    this.price = jsonProduct["price"].toDouble();
-    this.productId = jsonProduct["product_id"];
+    this.description = jsonProduct['description'];
+    this.name = jsonProduct['name'];
+    this.price = jsonProduct['price'].toDouble();
+    this.productId = jsonProduct['product_id'];
   }
 
   String get getDescription{

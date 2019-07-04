@@ -1,21 +1,21 @@
 class Order { 
   String email;
-  String colour;
+  String color;
   int productId;
   
   Order.empty() {
-    this.email = "";
-    this.colour = "";
+    this.email = '';
+    this.color = '';
     this.productId = 0;
   }
 
-  Order(String email, String colour, int productId) { 
+  Order(String email, String color, int productId) { 
     this.email = email;
-    this.colour = colour;
+    this.color = color;
     this.productId = productId;
   }
 
   String toString() {
-    return '$email, $colour $productId';
+    return '$email, $color $productId';
   }
 }

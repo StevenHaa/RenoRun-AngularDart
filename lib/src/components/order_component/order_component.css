@@ -34,7 +34,7 @@
         box-shadow: 0 0 0 2px #2F80ED; /* Full freedom. (works also with border-radius) */
     }
 
-    .colour > p {
+    .color > p {
         font-style: normal;
         font-weight: bold;
         font-size: 10px;
@@ -179,7 +179,7 @@
         flex: 1 1 70%;
     }
 
-    .colour p {
+    .color p {
         font-style: normal;
         font-weight: bold;
         font-size: 10px;

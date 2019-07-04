@@ -44,18 +44,16 @@ class OrderComponent implements OnInit{
     }
   }
 
-  // function to change the colour chosen
-  void updateColour(String colour) {
-    print('Picked : $colour');
-    model.colour = colour;
-    chosenColor = colour;
+  // function to change the color chosen
+  void updatecolor(String color) {
+    model.color = color;
+    chosenColor = color;
   }
 
   // function when submitting the form
   void onSubmit(int productId) {
     model.productId = productId;
-    print('onSubmit : $model');
-    postOrder(productId, model.email, model.colour);
+    postOrder(productId, model.email, model.color);
     changeButtonCss();
     clearForm();
   }
@@ -63,15 +61,14 @@ class OrderComponent implements OnInit{
   // function to clear the form after sending
   void clearForm() {
     model.email = "";
-    model.colour = "";
+    model.color = "";
     chosenColor = null;
     validEmail = false;
   }
 
   // function to send an order
-  void postOrder(int productId, String email, String colour){
-    orderService.postOrder(productId, email, colour);
-    print('done');
+  void postOrder(int productId, String email, String color){
+    orderService.postOrder(productId, email, color);
   }
 
   // function to change the css of the send button after sending 

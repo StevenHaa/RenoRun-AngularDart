@@ -20,33 +20,33 @@
             </div>
         </div> -->
     
-        <div class="colour">
+        <div class="color">
             <p>COLOUR</p>
             <label>
-                <input type="radio" #colourGold name="colour" value="gold"
-                    (change)="updateColour(colourGold.value)" required/>
+                <input type="radio" #colorGold name="color" value="gold"
+                    (change)="updatecolor(colorGold.value)" required/>
                 <span class="check-container gold">
-                    <span [ngClass]="{'check-background': true, 'checked': chosenColor==colourGold.value}">
+                    <span [ngClass]="{'check-background': true, 'checked': chosenColor==colorGold.value}">
                         <span class="check-gold"></span>
                     </span>
                 </span>
             </label>
             
             <label>
-                <input type="radio" #colourBlue name="colour" value="blue"
-                    (change)="updateColour(colourBlue.value)"/>
+                <input type="radio" #colorBlue name="color" value="blue"
+                    (change)="updatecolor(colorBlue.value)"/>
                 <span class="check-container blue">
-                        <span [ngClass]="{'check-background': true, 'checked': chosenColor==colourBlue.value}">
+                        <span [ngClass]="{'check-background': true, 'checked': chosenColor==colorBlue.value}">
                             <span class="check-blue"></span>
                         </span>
                 </span>
             </label>
     
             <label>
-                <input type="radio" #colourRed name="colour" value="red"
-                    (change)="updateColour(colourRed.value)"/>
+                <input type="radio" #colorRed name="color" value="red"
+                    (change)="updatecolor(colorRed.value)"/>
                 <span class="check-container red">
-                    <span [ngClass]="{'check-background': true, 'checked': chosenColor==colourRed.value}">
+                    <span [ngClass]="{'check-background': true, 'checked': chosenColor==colorRed.value}">
                         <span class="check-red"></span>
                     </span>
                 </span>

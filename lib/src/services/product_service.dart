@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class ProductService {
     Store store;
-    var url = "http://localhost:5000/products";
+    var url = 'http://localhost:5000/products';
 
    Future<Store> fetchProductData() async {
         var res = await http.get(url);
