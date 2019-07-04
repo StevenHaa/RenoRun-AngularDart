@@ -26,7 +26,9 @@ class ProductComponent implements OnInit{
 	}
 	
 	void fetchData() async {
+    // returns a Store object containing a list of products 
 		store = await productService.fetchProductData();
+    // to be used / access in the html file through interpolation
 		products = store.products;
 	}
 }

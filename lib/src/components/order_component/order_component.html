@@ -55,6 +55,6 @@
     
         <input class="submitButton" type="submit" value="{{buttonText}}" 
             [disabled]="(validEmail == false && chosenColor == null)"
-            [ngClass]="{'inputs-filled': (validEmail == true && chosenColor != null) , 'sent-order': sentOrder == true}"
+            [ngClass]="{'inputs-filled': (validEmail == true && chosenColor != null), 'sent-order': sentOrder == true}"
         >
     </form>
